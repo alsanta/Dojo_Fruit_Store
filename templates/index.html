@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Dojo Fruit Store</title>
+</head>
+
+<body>
+    <header>
+        <h4>Dojo Fruit Store</h1>
+    </header>
+    <div id="body" class="d-flex justify-content-between">
+        <div class="bodyLeft d-flex flex-column mt-5">
+            <div class="upperBL">
+                <h6 class="text-decoration-underline">What would you like to buy?</h3>
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">Fruit name</th>
+                                <th scope="col">Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Strawberry</td>
+                                <td>
+                                    <form action="/checkout" method="POST">
+                                        <select name="strawQuant" id="">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Raspberry</td>
+                                <td><select name="raspQuant" id="">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Apple</td>
+                                <td><select name="appleQuant" id="">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+            <div class="lowerBL">
+                <h6 class="text-decoration-underline">Your Information</h6>
+                <div class="name d-flex justify-content-between">
+                    <div class="nameInfo d-flex justify-content-between mb-1">
+                        <label for="sName">Name:</label>
+                        <input name='sName' class="infoBoxes" type="text">
+                    </div>
+                    <div class="info">
+                        <div class="idInfo d-flex justify-content-between mb-1">
+                            <label for="sId">Student ID:</label>
+                            <input name='sId' class="infoBoxes" type="text">
+                        </div>
+                        <div id="buy" class="d flex text-end">
+                            <input type="submit" method='POST' action='/student' name="buy" id="">
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bodyRight">
+            <div class="rightBox">
+                <h6>Welcome to Dojo Fruit Store!</h6>
+                <br>
+                <p>Your dojo decided to buy fruits for all the students! Please use this app to tell is what you would
+                    like to have! Once we get your order, we'll charge your student account automatically.</p>
+                <br>
+                <p>Dojo Fruit Store is proudly built using flask.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
